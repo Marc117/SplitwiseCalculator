@@ -1,13 +1,23 @@
 {
 
-  "manifest_version": 1,
+  "manifest_version": 2,
   "name": "SplitwiseCalculator",
   "version": "1.0",
 
   "description": "Automatically adds the prices for each item in a note area on splitwise.com",
-
+  "homepage_url": "https://github.com/Marc117/SplitwiseCalculator",
   "icons": {
-    "48": "icons/calculate.png"
+    "48": "icons/calculate_black.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action":{
+    "default_icon": "icons/calculate_white.png",
+    "default_title": "Splitwise Calculator",
+    "default_popup": "popup/calculate.html"
   },
 
   "content_scripts": [
