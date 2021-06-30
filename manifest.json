@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 1,
+  "name": "SplitwiseCalculator",
+  "version": "1.0",
+
+  "description": "Automatically adds the prices for each item in a note area on splitwise.com",
+
+  "icons": {
+    "48": "icons/calculate.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.splitwise.com/#/groups/*"],
+      "js": ["splitwiseCalculator.js"]
+    }
+  ]
+
+}
