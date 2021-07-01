@@ -15,7 +15,7 @@ function listenForClicks(){
         if (e.target.classList.contains("calculate")){
             browser.tabs.query({active:true, currentWindow: true})
                 .then(calculate)
-                .catch(reportError)
+                .catch(reportError);
         }
 
     });

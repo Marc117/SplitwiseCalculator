@@ -15,11 +15,11 @@
 
     }
 
-    browser.runtime.onMessage.addEventListener((message)=>{
-        if (message.command == "calculate"){
+    // TODO: swap with not deprecated Method but how???
+    browser.runtime.onMessage.addListener("onchange",(message)=>{
+        if (message.command === "calculate"){
             calculatePrice();
-            console.log("Test2");
         }
-    })
+    });
 
 })();
