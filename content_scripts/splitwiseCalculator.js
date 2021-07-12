@@ -16,12 +16,45 @@
 
         console.log(test);
 
+        var calculatorReg = '[\\d\\+\\/\\*\\.\\,\\- \\(\\)]*';
+
         // testing Regex : (?<price>\d*\.\d*)(?:.+?)(?<times>(?<=x)\d*) not working so far
-        "shampoo 2.50 x2\n" +
-        "beer 11.20\n" +
-        "toast 4.48 x2\n" +
-        "bananas 1.34\n" +
-        "milk 1.12"
+        var test = "shampoo 2.50 *2\n" +
+            "beer 11.20\n" +
+            "toast 4.48 *2\n" +
+            "bananas 1.34\n" +
+            "milk 1.12"
+
+        var myArray = calculatorReg.exec(test);
+        console.log(myArray);
+
+        var test = "shampoo 2.50 *2\n" +
+            "beer 11.20\n" +
+            "toast 4.48 *2\n" +
+            "bananas 1.34\n" +
+            "milk 1.12";
+
+
+        var priceArray = test.match(regex);
+
+
+        // calculate price for each row
+
+        var testRow =  " 2.50 *2";
+
+        var testRow = testRow.replace(/\s/g, "");
+
+        var test2 = testRow.split(/([\+\/\*\- \(\)])/gm);
+
+        test2.forEach(element =>{
+
+            var zahl = parseFloat(element);
+
+            // use math js to calcualte whole string as math expression
+            console.log(zahl);
+
+        })
+
 
     }
 
